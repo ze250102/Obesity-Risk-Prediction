@@ -103,7 +103,3 @@ Low Zi Yang
 ---
 
 This project is a step toward leveraging data-driven insights for addressing the obesity epidemic. Contributions and feedback are welcome to improve the approach and its applicability.
-
----
-
-This project is a step toward leveraging data-driven insights for addressing the obesity epidemic. Contributions and feedback are welcome to improve the approach and its applicability.
