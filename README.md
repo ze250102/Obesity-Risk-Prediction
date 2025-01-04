@@ -93,14 +93,13 @@ To ensure the reproducibility of this project:
 
 ## Contributors
 
-- **
-Tan Rik Ee
-Teo Kai Ning
-Tan Jian Lin
-Yuki Sim Tze Yii
-Chua Sze Yan
+Tan Rik Ee, 
+Teo Kai Ning, 
+Tan Jian Lin, 
+Yuki Sim Tze Yii, 
+Chua Sze Yan, 
 Low Zi Yang
-**  
+
 ---
 
 This project is a step toward leveraging data-driven insights for addressing the obesity epidemic. Contributions and feedback are welcome to improve the approach and its applicability.
