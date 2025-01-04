@@ -1,8 +1,9 @@
-numpy==1.23.5
-pandas==1.5.3
-matplotlib==3.7.1
-seaborn==0.12.2
-scikit-learn==1.2.2
-imbalanced-learn==0.10.1
-flask==2.3.2
-pickle-mixin==1.0.2
+numpy==1.23.5  # For numerical computations
+pandas==1.5.3  # For data manipulation and analysis
+matplotlib==3.7.1  # For data visualization
+seaborn==0.12.2  # For advanced statistical data visualization
+scikit-learn==1.2.2  # For machine learning algorithms and evaluation
+xgboost==1.7.5  # For advanced gradient boosting modeling
+imbalanced-learn==0.10.1  # For handling class imbalance (e.g., SMOTE)
+flask==2.3.2  # For deploying the machine learning model as a web application
+pickle-mixin==1.0.2  # For saving and loading the trained model
