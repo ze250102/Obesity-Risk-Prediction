@@ -1,4 +1,4 @@
-# Obesity Prediction Project
+# Obesity Risk Prediction Project
 
 This project applies machine learning techniques to predict the likelihood of an individual developing obesity based on demographic, lifestyle, and dietary factors. By leveraging a dataset of 1,610 individuals from Türkiye, the project aims to support healthcare professionals in identifying high-risk individuals and formulating targeted interventions to mitigate obesity-related health issues.
 
