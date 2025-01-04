@@ -1,0 +1,80 @@
+### Environment Setup Guide
+
+To ensure the reproducibility of this study, follow the detailed guide below to recreate the computational environment. You can use either Python's built-in `venv` module or `conda`.
+
+---
+
+#### 1. Using `venv` (Virtual Environment Tool):
+
+1. **Create the virtual environment:**
+   ```bash
+   python -m venv venv
+   ```
+
+2. **Activate the virtual environment:**
+   - On **Windows**:
+     ```bash
+     venv\Scripts\activate
+     ```
+   - On **Mac/Linux**:
+     ```bash
+     source venv/bin/activate
+     ```
+
+3. **Install the required dependencies:**
+   Using the `requirements.txt` file provided, install all libraries and dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **Verify the environment:**
+   Check that all required libraries are installed by running:
+   ```bash
+   pip list
+   ```
+
+---
+
+#### 2. Using `conda` (Conda Environment Tool):
+
+1. **Create the Conda environment:**
+   ```bash
+   conda create --name obesity_project python=3.10
+   ```
+
+2. **Activate the Conda environment:**
+   ```bash
+   conda activate obesity_project
+   ```
+
+3. **Install the required dependencies:**
+   Convert the `requirements.txt` file to a Conda-compatible format (if needed) or manually install the libraries:
+   ```bash
+   conda install --file requirements.txt
+   ```
+
+4. **Verify the environment:**
+   List all installed packages and verify their versions:
+   ```bash
+   conda list
+   ```
+
+---
+
+#### 3. Documenting the Environment:
+
+After setting up the environment, export the exact dependencies and versions for future replication:
+
+- For `venv`:
+  ```bash
+  pip freeze > requirements.txt
+  ```
+
+- For `conda`:
+  ```bash
+  conda env export > environment.yml
+  ```
+
+---
+
+This guide ensures that anyone attempting to replicate the project has clear, step-by-step instructions to recreate the computational environment and run the project seamlessly.
