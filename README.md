@@ -34,6 +34,8 @@ The dataset, sourced from Kaggle (Koklu & Sulak, 2024), consists of data on 1,61
 - **Dietary Habits**: Frequency of Fast Food Consumption, Number of Main Meals Daily, etc.
 - **Target Variable**: Weight classification (Underweight, Normal, Overweight, Obesity).
 
+Link: https://www.kaggle.com/datasets/suleymansulak/obesity-dataset
+
 ## Methodology
 
 1. **Data Cleaning**:  
