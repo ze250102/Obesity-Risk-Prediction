@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obesity Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7fc;
+            color: #333;
+        }
+        .container {
+            width: 60%;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+        select, input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 100%;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .result {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .result h2 {
+            font-size: 1.5rem;
+        }
+        .result p {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #4CAF50;
+        }
+        .error {
+            color: #ff4d4d;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Obesity Prediction</h1>
+        <form method="POST" action="/predict">
+            <div class="form-group">
+                <label for="Sex">Gender:</label>
+                <select name="Sex" required>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="Age">Age:</label>
+                <input type="number" name="Age" step="any" min="0" required>
+            </div>
+
+            <div class="form-group">
+                <label for="Height">Height (cm):</label>
+                <input type="number" name="Height" step="any" min="0" required>
+            </div>
+
+            <div class="form-group">
+                <label for="Overweight_Obese_Family">Family History of Overweight/Obesity:</label>
+                <select name="Overweight_Obese_Family" required>
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="Consumption_of_Fast_Food">Fast Food Consumption (times/week):</label>
+                <input type="number" name="Consumption_of_Fast_Food" step="any" min="0" required>
+            </div>
+
+            <div class="form-group">
+                <label for="Frequency_of_Consuming_Vegetables">Vegetable Consumption (times/day):</label>
+                <input type="number" name="Frequency_of_Consuming_Vegetables" step="any" min="0" required>
+            </div>
+
+            <div class="form-group">
+                <label for="Number_of_Main_Meals_Daily">Number of Main Meals (daily):</label>
+                <input type="number" name="Number_of_Main_Meals_Daily" step="any" min="1" required>
+            </div>
+
+            <div class="form-group">
+                <label for="Food_Intake_Between_Meals">Food Intake Between Meals:</label>
+                <select name="Food_Intake_Between_Meals" required>
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="Smoking">Smoking:</label>
+                <select name="Smoking" required>
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="Liquid_Intake_Daily">Daily Liquid Intake (L):</label>
+                <input type="number" name="Liquid_Intake_Daily" step="any" min="0" required>
+            </div>
+
+            <div class="form-group">
+                <label for="Calculation_of_Calorie_Intake">Calorie Intake Calculation:</label>
+                <select name="Calculation_of_Calorie_Intake" required>
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="Physical_Excercise">Physical Exercise:</label>
+                <select name="Physical_Excercise" required>
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="Schedule_Dedicated_to_Technology">Technology Time (hours/day):</label>
+                <input type="number" name="Schedule_Dedicated_to_Technology" step="any" min="0" required>
+            </div>
+
+            <div class="form-group">
+                <label for="Type_of_Transportation_Used">Transportation Type:</label>
+                <select name="Type_of_Transportation_Used" required>
+                    <option value="0">Passive (e.g., car)</option>
+                    <option value="1">Active (e.g., walking, cycling)</option>
+                </select>
+            </div>
+
+            <button type="submit">Predict</button>
+        </form>
+
+        {% if prediction is not none %}
+        <div class="result">
+            <h2>Prediction Result:</h2>
+            <p>The prediction is: {{ prediction }}</p>
+        </div>
+        {% endif %}
+
+        {% if error %}
+        <div class="error">
+            <p>{{ error }}</p>
+        </div>
+        {% endif %}
+    </div>
+
+</body>
+</html>
+
+
+
